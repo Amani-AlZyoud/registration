@@ -33,13 +33,7 @@ registrationForm.addEventListener("submit", (event) => {
 
     
         validation();
-       
-        sessionStorage.setItem("UserName",user.userName);
-        sessionStorage.setItem("UserPassword",user.userPassword);
-        sessionStorage.setItem("UserEmail",user.userEmail);
-        sessionStorage.setItem("UserPhone",user.userPhone);
-  
-       
+            
         
     }
 );
@@ -112,6 +106,11 @@ else if(!/^07\d{8}$/.test(user.userPhone)){
 
 else
 alert("✔️ THE FORM WAS SUBMITTED SUCCESSFULLY!");
+
+sessionStorage.setItem("UserName",user.userName);
+sessionStorage.setItem("UserPassword",user.userPassword);
+sessionStorage.setItem("UserEmail",user.userEmail);
+sessionStorage.setItem("UserPhone",user.userPhone);
 registrationForm.reset();
 return true;
 
